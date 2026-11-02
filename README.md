@@ -1,4 +1,4 @@
-# Mathematical Perspectives on Machine Learning
+# Math-Modeling-ML
 
 **机器学习研究中的数学结构与建模笔记**
 
@@ -529,10 +529,10 @@ Huber 在小残差处保持平方形状，大残差处变成线性增长。对�
 **批次梯度方差的分解。** 取某一参数方向上的单样本梯度 g_i，批均值的方差为：
 
 ```math
-\operatorname{Var}\!\left(\frac1b\sum_{i=1}^{b}g_i\right)
-=\frac1{b^2}\left[
-\sum_i\operatorname{Var}(g_i)+
-\sum_{i\ne j}\operatorname{Cov}(g_i,g_j)\right].
+\mathrm{Var}\left(\frac{1}{b}\sum_{i=1}^{b}g_i\right)
+=\frac{1}{b^2}\left[
+\sum_{i=1}^{b}\mathrm{Var}(g_i)+
+\sum_{i\ne j}\mathrm{Cov}(g_i,g_j)\right].
 ```
 
 独立同分布、同方差时可简化为 σ_g²/b；连续片段的梯度相关、批次间工况变化都会影响这个结论。**输入像素方差、随机过程平稳性和梯度方差是不同对象**，需要分别测量。
